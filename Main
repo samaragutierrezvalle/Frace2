@@ -1,0 +1,45 @@
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Spliterator;
+
+public class Main {
+
+
+
+    public static void main(String[] args) {
+
+        //creamos un objeto
+        Ordenar_frace a = new Ordenar_frace();
+
+        //Asignamos la direccion de nuestro txt
+        System.out.println(a.leerTxt("C:\\Archivos\\txt\\holamundo.txt"));
+        String frace = a.leerTxt("C:\\Archivos\\txt\\holamundo.txt");
+        System.out.println(frace);
+
+
+        // Metodo Split() - Separa las cadenas a partir de un limitador "" o / o -
+        //Se alamcena la cadena
+        String [] PalabrasDelArchivo = frace.split(" ");
+
+
+        for (int i = 0; i <PalabrasDelArchivo.length ; i++) {
+            System.out.println("Palabra: "+PalabrasDelArchivo[i]);
+        }
+
+        ArrayList<String> listaOrdenada = new ArrayList<String>();
+
+
+        String[] PalabrasOriginales = null;
+        listaOrdenada.add("En la materia de estructura de datos todos estan reprobados");
+
+
+        System.out.println("*****************************ARREGLO 2 **********************************************");
+        for (String nombre : listaOrdenada){
+            PalabrasOriginales = nombre.split(" ");
+
+            for (int i = 0; i <PalabrasOriginales.length ; i++) {
+                System.out.println("Palabra: "+PalabrasOriginales[i]);
+            }
+
+        }
