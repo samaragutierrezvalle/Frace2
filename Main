@@ -43,3 +43,24 @@ public class Main {
             }
 
         }
+
+        String [] PalabrasCorregidas = new String[20];
+
+        System.out.println("************************3 AREGLO*********************************");
+        for (int i = 0; i <PalabrasOriginales.length ; i++) {
+            for (int j = 0; j < PalabrasDelArchivo.length; j++) {
+                String aux = PalabrasOriginales[i];
+                String aux2 = PalabrasDelArchivo[j];
+                if (aux.equals(aux2)){
+                 PalabrasCorregidas[i] = aux;
+                }
+            }
+
+        }
+        for (int i = 0; i <PalabrasOriginales.length ; i++) {
+            System.out.println("Palabra "+PalabrasCorregidas[i]);
+        }
+
+
+        }
+    }
