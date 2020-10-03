@@ -1,0 +1,37 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.util.ArrayList;
+
+
+public class Ordenar_frace {
+
+    public String leerTxt(String direccion) { //Recibira la direccion del archivo
+
+        String texto = "";
+        try {
+            //Creamos el objeto
+            BufferedReader bf = new BufferedReader(new FileReader(direccion));
+            String temp = ""; // Guardaremos el texto
+
+            String bfRead;
+            // leeremos las lineas, el metodo readLine() devuelve un string
+            while ((bfRead = bf.readLine()) != null) { //has el ciclo mientras bf.readLine tenga datos
+
+                temp = temp + bfRead;// Guardamos el texto del archivo
+            }
+            texto = temp; //le asignamos el valor
+
+        } catch (Exception e) {
+            System.out.println("No se encontro el archivo");
+        }
+        return texto;
+    }
+
+
+    public static void Ordenar() {
+
+
+
+
+    }
+}
